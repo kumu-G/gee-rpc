@@ -20,6 +20,7 @@ func startServer(addr chan string) {
 	geerpc.Accept(l)
 }
 
+// 在 main 函数中使用了 client.Call 并发了 5 个 RPC 同步调用，参数和返回值的类型均为 string。
 func main() {
 	log.SetFlags(0)
 	addr := make(chan string)
